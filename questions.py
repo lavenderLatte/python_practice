@@ -22,3 +22,26 @@ for pwr in range(1, 6):
     
     if int(root) ** pwr == user_input:
         print("For your input the root is (", int(root), ") and pwr  is (", pwr, ")")
+
+"""
+[My Problem]
+When I run the code below in Python2, it prints 'succeeded: 5.0'. Whereas when I run it in Python3, it prints 'succeeded: 4.999999999999998'.
+Why is it different in those two?
+And how come Python3 can get answer like 4.999999999999998 when I increment by 0.1 only?
+"""
+
+x = 25
+epsilon = 0.01
+step = 0.1
+guess = 0.0
+
+while abs(guess**2 - x) >= epsilon: 
+    if guess <= x:  
+        guess += step
+    else:
+        break
+
+if abs(guess**2 - x) >= epsilon:
+    print('failed')
+else:
+    print('succeeded: ' + str(guess))
