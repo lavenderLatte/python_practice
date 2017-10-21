@@ -17,7 +17,7 @@ for pwr in range(1, 6):
     Since power is only limited to [1, 2, 3, 4, 5], even if the input is really large number, 
     This code only will calculate three times. 
     """
-    root = user_input ** (1/pwr)
+    root = user_input ** (1.0/pwr)
     print("pwr:", pwr, ", possible_root:", root)
     
     if int(root) ** pwr == user_input:
