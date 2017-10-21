@@ -11,13 +11,17 @@ Other helpful sets:
     ascii_lowercase = 'abcdefghijklmnopqrstuvwxyz'
     ascii_uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     digits = '0123456789
+
+Usage:
+from words_one_ed import words_one_ed
+words_one_ed("abc", "xy")
 """
 
 import string
 
 # toy example: print(words_one_ed("abc", "xy"))
 def words_one_ed(str1, input_set=string.ascii_letters):
-    
+
     """ words_one_ed("abc", "") == ['bc', 'ac', 'ab'] """
     """ words_one_ed("abc", "xy") == ['xabc', 'yabc', 'axbc', 'aybc', 'abxc', 'abyc', 'abcx', 'abcy', 'bc', 'ac', 'ab', 'xbc', 'ybc', 'axc', 'ayc', 'abx', 'aby']"""
     """ words_one_ed("", "xy") == ['x', 'y'] """
