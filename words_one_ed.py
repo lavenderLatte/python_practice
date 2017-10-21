@@ -37,15 +37,15 @@ def words_one_ed(str1, input_set=string.ascii_letters):
     
     #additions
     for i in range(n+1):
-        out.extend(add_char(str1, i, input_set))
+        out.extend(add_char(str1, i, input_set)) # using extend because add_char returns a list
 
     #deletions
     for i in range(n):
-        out.append(remove_char(str1, i))
+        out.append(remove_char(str1, i)) # append because remove_char return a word
 
     #replacements
     for i in range(n):
-        out.extend(replace_char(str1, i, input_set))
+        out.extend(replace_char(str1, i, input_set)) # using extend because replace_char returns a list
 
     
     return out
