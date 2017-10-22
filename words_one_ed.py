@@ -14,7 +14,8 @@ Other helpful sets:
 
 Usage:
 from words_one_ed import words_one_ed
-words_one_ed("abc", "xy")
+words_one_ed("abc") # uses default input_set=string.ascii_letters
+words_one_ed("abc", "xy") # uses input_set="xy"
 """
 
 import string
